@@ -4,21 +4,28 @@ import Input from './components/Input/Input';
 import Button from './components/Button/Button';
 import Result from './components/Result/Result';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
+import LanguageToggle from './components/LanguageToggle/LanguageToggle';
+import { useTranslation } from './hooks/useStranslations';
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   const [height, setHeight] = useState<string>('');
   const [topArea, setTopArea] = useState<string>('');
   const [bottomArea, setBottomArea] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
+  const parseNumber = (value: string): number => {
+    return parseFloat(value.replace(',', '.'));
+  };
+
   const calculateVolume = () => {
-    const h = parseFloat(height);
-    const a1 = parseFloat(topArea);
-    const a2 = parseFloat(bottomArea);
+    const h = parseNumber(height);
+    const a1 = parseNumber(topArea);
+    const a2 = parseNumber(bottomArea);
 
     if (isNaN(h) || isNaN(a1) || isNaN(a2)) {
-      alert('Pleasy enter correctly value')
+      alert(t('errorInvalidInput'))
       return
     }
 
@@ -30,32 +37,33 @@ const App: React.FC = () => {
     transition-colors duration-300 flex items-center justify-center`}>
       <div className='bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg max-w-md w-full transition-colors duration-300'>
         <h1 className='text-2xl font-semibold mb-6 text-gray-800 dark:text-white text-center'>
-          Trancated prism colume calculator
+          {t('title')}
         </h1>
         <Input
-          label='Height'
+          label={t('height')}
           value={height}
           onChange={setHeight}
-          placeholder='Enter height'
+          placeholder={t('enterHeight')}
         />
         <Input
-          label='Area of the upper base'
+          label={t('topArea')}
           value={topArea}
           onChange={setTopArea}
-          placeholder='Enter the area of the upper base'
+          placeholder={t('enterTopArea')}
         />
         <Input
-          label='Area of the bottom base'
+          label={t('bottomArea')}
           value={bottomArea}
           onChange={setBottomArea}
-          placeholder='Enter the area of the bottom base'
+          placeholder={t('enterBottomArea')}
         />
-        <Button onClick={calculateVolume}>Calculate</Button>
+        <Button onClick={calculateVolume}>{t('calculate')}</Button>
         <Result value={result} />
         <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
+        <LanguageToggle />
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
