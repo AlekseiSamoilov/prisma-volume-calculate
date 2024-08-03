@@ -80,6 +80,16 @@ const App: React.FC = () => {
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
           <LanguageToggle />
         </div>
+        <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+          <a
+            className='text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors'
+            href='https://github.com/AlekseiSamoilov'
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aleksei Samoilov 2024
+          </a>
+        </div>
       </div>
       <Calculator />
     </div>
