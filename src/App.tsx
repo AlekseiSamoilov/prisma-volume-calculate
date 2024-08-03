@@ -6,9 +6,13 @@ import Result from './components/Result/Result';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import LanguageToggle from './components/LanguageToggle/LanguageToggle';
 import { useTranslation } from './hooks/useStranslations';
+import { useCalculator } from './hooks/useCalculator';
+import Calculator from './components/Calculator/Calculator';
 
 const App: React.FC = () => {
   const { t } = useTranslation();
+  const { openCalculator } = useCalculator();
+
   const [height, setHeight] = useState<string>('');
   const [topArea, setTopArea] = useState<string>('');
   const [bottomArea, setBottomArea] = useState<string>('');
@@ -57,11 +61,15 @@ const App: React.FC = () => {
           onChange={setBottomArea}
           placeholder={t('enterBottomArea')}
         />
-        <Button onClick={calculateVolume}>{t('calculate')}</Button>
         <Result value={result} />
+        <div className=' flex flex-col items-center justify-center'>
+          <Button onClick={calculateVolume}>{t('calculate')}</Button>
+          <Button onClick={openCalculator}>{t('openCalculator')}</Button>
+        </div>
         <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
         <LanguageToggle />
       </div>
+      <Calculator />
     </div>
   )
 }

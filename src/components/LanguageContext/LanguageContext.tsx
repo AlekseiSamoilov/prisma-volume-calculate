@@ -3,7 +3,7 @@ import React, { createContext, useState, ReactNode } from "react";
 type TLanguage = 'en' | 'ru';
 
 type TTranslationKey = 'title' | 'height' | 'topArea' | 'bottomArea' | 'calculate' | 'volume' |
-    'enterHeight' | 'enterTopArea' | 'enterBottomArea' | 'cubicUnits' | 'lightTheme' | 'darkTheme' | 'errorInvalidInput';
+    'enterHeight' | 'enterTopArea' | 'enterBottomArea' | 'cubicUnits' | 'lightTheme' | 'darkTheme' | 'errorInvalidInput' | 'openCalculator' | 'calculator';
 
 
 type TTranslations = {
@@ -49,7 +49,9 @@ const translation: TTranslations = {
         'cubicUnits': 'cubic units',
         'lightTheme': 'Light Theme',
         'darkTheme': 'Dark Theme',
-        'errorInvalidInput': 'Please enter valid numeric values. Use dot or comma as decimal separator.',
+        'errorInvalidInput': 'Please enter valid numeric values. Use dot as decimal separator.',
+        'openCalculator': 'Open Calculator',
+        'calculator': 'Calculator'
     },
     ru: {
         'title': 'Калькулятор объема усеченной призмы',
@@ -64,6 +66,8 @@ const translation: TTranslations = {
         'cubicUnits': 'кубических единиц',
         'lightTheme': 'Светлая тема',
         'darkTheme': 'Темная тема',
-        'errorInvalidInput': 'Пожалуйста, введите корректные числовые значения. Используйте точку или запятую в качестве разделителя десятичных дробей.'
+        'errorInvalidInput': 'Пожалуйста, введите корректные числовые значения. Используйте точку в качестве разделителя десятичных дробей.',
+        'openCalculator': 'Открыть калькулятор',
+        'calculator': 'Кальякулятор'
     }
 };
