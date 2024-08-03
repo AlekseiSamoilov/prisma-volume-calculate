@@ -36,6 +36,13 @@ const App: React.FC = () => {
     const volume = (h / 3) * (a1 + a2 + Math.sqrt(a1 * a2));
     setResult(volume);
   };
+
+  const clearAllInputs = () => {
+    setHeight('');
+    setTopArea('');
+    setBottomArea('');
+    setResult(null);
+  }
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark bg-gray-900' : 'bg gray-100'}
     transition-colors duration-300 flex items-center justify-center`}>
@@ -62,12 +69,17 @@ const App: React.FC = () => {
           placeholder={t('enterBottomArea')}
         />
         <Result value={result} />
-        <div className=' flex flex-col items-center justify-center'>
-          <Button onClick={calculateVolume}>{t('calculate')}</Button>
-          <Button onClick={openCalculator}>{t('openCalculator')}</Button>
+        <div className="flex flex-col items-center justify-center">
+          <Button onClick={calculateVolume} className="flex-1 min-w-[30%]">{t('calculate')}</Button>
+          <Button onClick={openCalculator} className="flex-1 min-w-[30%]">{t('openCalculator')}</Button>
+          <Button onClick={clearAllInputs} className="flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">
+            {t('clearAll')}
+          </Button>
         </div>
-        <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
-        <LanguageToggle />
+        <div className='flex items-center justify-center gap-2'>
+          <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
+          <LanguageToggle />
+        </div>
       </div>
       <Calculator />
     </div>
