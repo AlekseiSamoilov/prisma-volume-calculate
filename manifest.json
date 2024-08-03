@@ -1,6 +1,6 @@
 {
     "name": "Truncated Prism Calculator",
-    "short_name": "Prism Calc",
+    "short_name": "Prism Calculator",
     "description": "Calculate the volume of a truncated prism",
     "start_url": "/prisma-volume-calculate/index.html",
     "display": "standalone",
