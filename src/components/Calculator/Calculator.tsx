@@ -1,5 +1,6 @@
 import { useCalculator } from "../../hooks/useCalculator"
 import { useTranslation } from "../../hooks/useStranslations";
+import Button from "../Button/Button";
 
 const Calculator: React.FC = () => {
     const { isOpen, closeCalculator, result, updateResult } = useCalculator();
@@ -27,9 +28,6 @@ const Calculator: React.FC = () => {
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-xl w-full max-w[95%] sm:max-w-[90%] md:max-w-2xl lg:max-w-3xl">
                 <div className="flex justify-between items-center p-4 border-b dark:border-gray-700">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-500 dark:text-gray-300">{t('calculator')}</h2>
-                    <button onClick={closeCalculator} className="text-gray-500 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-100 text-3xl sm:text-4xl focus:outline-none">
-                        &times;
-                    </button>
                 </div>
                 <div className="p-6 sm:p-6">
                     <input
@@ -47,7 +45,9 @@ const Calculator: React.FC = () => {
                             >{btn}</button>
                         ))}
                     </div>
+
                 </div>
+                <Button onClick={closeCalculator} className="flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">{t('close')}</Button>
             </div>
         </div>
     );
