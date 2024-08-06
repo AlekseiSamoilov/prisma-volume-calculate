@@ -3,7 +3,8 @@ import React, { createContext, useState, ReactNode } from "react";
 type TLanguage = 'en' | 'ru';
 
 type TTranslationKey = 'title' | 'height' | 'topArea' | 'bottomArea' | 'calculate' | 'volume' |
-    'enterHeight' | 'enterTopArea' | 'enterBottomArea' | 'cubicUnits' | 'lightTheme' | 'darkTheme' | 'errorInvalidInput' | 'openCalculator' | 'calculator' | 'clearAll' | 'close';
+    'enterHeight' | 'enterTopArea' | 'enterBottomArea' | 'cubicUnits' | 'lightTheme' | 'darkTheme' | 'errorInvalidInput' | 'openCalculator' | 'calculator' | 'clearAll' | 'close' | 'copy' | 'copied' | 'savedValues'
+    | 'noSavedValues' | 'addCurrentValue' | 'clearAll';
 
 
 type TTranslations = {
@@ -53,7 +54,13 @@ const translation: TTranslations = {
         'openCalculator': 'Open Calculator',
         'calculator': 'Calculator',
         'clearAll': "Clear All",
-        'close': 'Close'
+        'close': 'Close',
+        'copy': 'Copy',
+        'copied': 'Copied!',
+        'savedValues': 'Saved Values',
+        'noSavedValues': 'No saved values yet',
+        'addCurrentValue': 'Add Current Value',
+
     },
     ru: {
         'title': 'Калькулятор объема усеченной призмы',
@@ -72,6 +79,11 @@ const translation: TTranslations = {
         'openCalculator': 'Открыть калькулятор',
         'calculator': 'Калькулятор',
         'clearAll': 'Очистить всё',
-        'close': 'Закрыть'
+        'close': 'Закрыть',
+        'copy': 'Копировать',
+        'copied': 'Скопировано!',
+        'savedValues': 'Сохраненные значения',
+        'noSavedValues': 'Пока нет сохраненных значений',
+        'addCurrentValue': 'Добавить текущее значение',
     }
 };
