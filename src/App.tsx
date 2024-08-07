@@ -76,7 +76,7 @@ const App: React.FC = () => {
             {t('clearAll')}
           </Button>
         </div>
-        <div className='flex items-center justify-center gap-2'>
+        <div className='flex items-center justify-center gap-1 flex-col'>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
           <LanguageToggle />
         </div>
