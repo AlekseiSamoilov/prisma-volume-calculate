@@ -1,10 +1,8 @@
-# Калькулятор объема усеченной призмы / Truncated Prism Volume Calculator
+## Калькулятор объема усеченной призмы / Truncated Prism Volume Calculator
 
-https://alekseisamoilov.github.io/prisma-volume-calculate/
+[Открыть калькулятор](https://alekseisamoilov.github.io/prisma-volume-calculate/)
 
 [English version below](#english-version)
-
-## Русская версия
 
 Это веб-приложение представляет собой калькулятор для расчета объема усеченной призмы. Приложение разработано как PWA (Progressive Web Application), что позволяет устанавливать его на устройства и использовать офлайн.
 
@@ -66,9 +64,9 @@ After installation, you can launch the application from your device's home scree
 
 ## Сontribution / Участие в разработке
 
-Мы приветствуем вклад в развитие проекта! Если у вас есть идеи или предложения, пожалуйста, создайте issue или отправьте pull request.
+Приветствуется вклад в развитие проекта! Если у вас есть идеи или предложения, пожалуйста, создайте issue или отправьте pull request.
 
-We welcome contributions to the project! If you have any ideas or suggestions, please create an issue or submit a pull request.
+Contributions to the project are welcome! If you have ideas or suggestions, please create a problem or submit a fix request.
 
 ## License / Лицензия
 
