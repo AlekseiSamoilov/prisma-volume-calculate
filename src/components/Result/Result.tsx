@@ -25,7 +25,7 @@ const Result: React.FC<iResultProps> = ({ value }) => {
             </p>
             <button
                 onClick={copyToClipboard}
-                className="ml-2 px-3 py-1 w-[40%] text-center mt-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors"
+                className="ml-2 px-3 py-1 w-[100%] text-center mt-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors"
             >
                 {isCopied ? t('copied') : t('copy')}
             </button>

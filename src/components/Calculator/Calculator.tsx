@@ -3,7 +3,7 @@ import { useCalculator } from "../../hooks/useCalculator"
 import { useTranslation } from "../../hooks/useStranslations";
 import Button from "../Button/Button";
 
-const MAX_INPUT_LENGTH = 10;
+const MAX_INPUT_LENGTH = 12;
 const MAX_SAVED_VALUES = 10;
 
 const Calculator: React.FC = () => {
@@ -92,27 +92,27 @@ const Calculator: React.FC = () => {
                         onChange={handleInputChange}
                         onPaste={handlePaste}
                         maxLength={MAX_INPUT_LENGTH}
-                        className="w-full mb-4 p-3 sm:p-4 text-right text-2xl sm:text-3xl border rounded bg-gray-100 dark:bg-gray-700 dark:text-white"
+                        className="w-full mb-4 p-3 sm:p-4 text-right text-2xl sm:text-3xl border rounded-xl bg-gray-100 dark:bg-gray-700 dark:text-white"
                     />
-                    <div className=" grid grid-cols-4 gap-2 sm:gap-3 text-gray-700 dark:text-gray-100">
+                    <div className="grid grid-cols-4 gap-2 sm:gap-3 text-gray-700 dark:text-gray-100">
                         {buttons.map((btn) => (
                             <button
                                 key={btn}
                                 onClick={() => handleButtonClick(btn)}
-                                className="bg-gray-200 dark:bg-gray-600 p-2 sm:p-3 rounded text-lg sm:text-xl font-simibold hover:bg-blue-200 active:bg-blue-400 dark:hover:bg-blue-700 dark:active:bg-blue-800 transition-colors"
+                                className="bg-gray-200 dark:bg-gray-600 p-2 sm:p-3 rounded-xl text-lg sm:text-xl font-simibold hover:bg-blue-200 active:bg-blue-400 dark:hover:bg-blue-700 dark:active:bg-blue-800 transition-colors"
                             >{btn}</button>
                         ))}
                     </div>
-                    <div className=" pt-4 flex-grow overflow-y-auto mb-1 sm:mb-2">
+                    <div className="pt-4 flex-grow overflow-y-auto mb-1 sm:mb-2">
                         {savedValues.length === 0 ? (
                             <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">{t('noSavedValues')}</p>
                         ) : (
-                            <div className=" grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2">
                                 {savedValues.map((value, index) => (
                                     <button
                                         key={index}
                                         onClick={() => copyToClipboard(value, index)}
-                                        className="ml-1 sm:ml-2 px-1 sm:px-2 py-2 sm:py-2 bg-blue-500 text-white rounded text-xs sm:text-sm hover:bg-blue-600 transition-colors flex-shrink-0"
+                                        className="ml-1 sm:ml-2 px-1 sm:px-2 py-2 sm:py-2 bg-blue-500 text-white rounded-xl text-xs sm:text-sm hover:bg-blue-600 transition-colors flex-shrink-0"
                                     >
                                         {copiedIndex === index ? t('copied') : value}
                                     </button>
@@ -120,7 +120,7 @@ const Calculator: React.FC = () => {
                             </div>
                         )}
                     </div>
-                    <Button onClick={closeCalculator} className="flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">{t('close')}</Button>
+                    <Button onClick={closeCalculator} className="rounded flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">{t('close')}</Button>
                 </div>
             </div>
         </div>

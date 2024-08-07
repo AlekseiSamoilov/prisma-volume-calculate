@@ -72,7 +72,7 @@ const translation: TTranslations = {
         'enterHeight': 'Введите высоту',
         'enterTopArea': 'Введите площадь верха',
         'enterBottomArea': 'Введите площадь низа',
-        'cubicUnits': 'кубических единиц',
+        'cubicUnits': 'куб. единиц',
         'lightTheme': 'Светлая тема',
         'darkTheme': 'Темная тема',
         'errorInvalidInput': 'Пожалуйста, введите корректные числовые значения. Используйте точку в качестве разделителя десятичных дробей.',
