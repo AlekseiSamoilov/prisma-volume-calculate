@@ -1,5 +1,7 @@
 ## Калькулятор объема усеченной призмы / Truncated Prism Volume Calculator
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 [Открыть калькулятор](https://alekseisamoilov.github.io/prisma-volume-calculate/)
 
 [English version below](#english-version)
@@ -70,4 +72,6 @@ Contributions to the project are welcome! If you have ideas or suggestions, plea
 
 ## License / Лицензия
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Этот проект лицензирован по лицензии CC BY-NC - подробности см. в файле [LICENSE.md](LICENSE.md).
+
+This project is licensed under the CC BY-NC License - see the [LICENSE.md](LICENSE.md) file for details.
