@@ -5,7 +5,7 @@ import Button from './components/Button/Button';
 import Result from './components/Result/Result';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import LanguageToggle from './components/LanguageToggle/LanguageToggle';
-import { useTranslation } from './hooks/useStranslations';
+import { useTranslation } from './hooks/useTranslations';
 import { useCalculator } from './hooks/useCalculator';
 import Calculator from './components/Calculator/Calculator';
 

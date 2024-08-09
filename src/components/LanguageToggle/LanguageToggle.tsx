@@ -1,4 +1,4 @@
-import { useTranslation } from "../../hooks/useStranslations"
+import { useTranslation } from "../../hooks/useTranslations"
 
 const LanguageToggle: React.FC = () => {
     const { language, setLanguage } = useTranslation();

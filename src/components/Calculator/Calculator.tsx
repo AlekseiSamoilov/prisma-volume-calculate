@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCalculator } from "../../hooks/useCalculator"
-import { useTranslation } from "../../hooks/useStranslations";
+import { useTranslation } from "../../hooks/useTranslations";
 import Button from "../Button/Button";
 
 const MAX_INPUT_LENGTH = 12;

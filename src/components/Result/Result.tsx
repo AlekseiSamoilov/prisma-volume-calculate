@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTranslation } from "../../hooks/useStranslations";
+import { useTranslation } from "../../hooks/useTranslations";
 
 interface iResultProps {
     value: number | null;
