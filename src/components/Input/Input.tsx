@@ -15,6 +15,7 @@ const Input: React.FC<IInputProps> = ({ label, value, onChange, placeholder }) =
                 {label}
             </label>
             <input
+                data-testid='input'
                 type="number"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
