@@ -3,14 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="png" href="/public/calculator.png" />
+  <link rel="icon" type="png" href="/public/ai-logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Truncated Prism Calculator</title>
+
+  <!-- SEO Мета-теги -->
+  <title>Калькулятор объема усеченной призмы | Онлайн расчет</title>
+  <meta name="description"
+    content="Бесплатный онлайн калькулятор для расчета объема усеченной призмы. Простой и точный расчет по формуле V = (h/3) × (S₁ + S₂ + √(S₁×S₂)). Мгновенный результат." />
+  <meta name="keywords"
+    content="калькулятор объема, усеченная призма, расчет объема, геометрический калькулятор, математические расчеты" />
+
+  <!-- Open Graph теги для соцсетей -->
+  <meta property="og:title" content="Калькулятор объема усеченной призмы" />
+  <meta property="og:description"
+    content="Бесплатный онлайн калькулятор для расчета объема усеченной призмы. Простой и точный расчет." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://домен.ru" />
+  <meta property="og:image" content="/public/calculator.png" />
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Prism Calc">
+  <meta name="apple-mobile-web-app-title" content="Калькулятор призмы">
 
+  <!-- Иконка -->
   <link rel="apple-touch-icon" href="/public/calculator.png">
 
   <!-- Сплеш-экраны для iPhone XS Max, 11 Pro Max -->
@@ -27,32 +42,59 @@
     media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
     href="/public/splash_screen_1170x2532.png">
 
-  <!-- Сплеш-экраны для iPhone XR, 11 -->
-  <!-- <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
-    href="/splash-828x1792.png"> -->
-
-
-  <!-- Сплеш-экраны для iPhone 8, 7, 6s, 6 -->
-  <!-- <link rel="apple-touch-startup-image"
-    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
-    href="/splash-750x1334.png"> -->
-
-  <!-- Сплеш-экраны для iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus -->
-  <!-- <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
-    href="/splash-1242x2208.png"> -->
-
   <link rel="manifest" href="/manifest.json">
 
+  <!-- Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(XXXXXXXX, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    });
+  </script>
+
+  <!-- РСЯ -->
+  <script>window.yaContextCb = window.yaContextCb || []</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Скрипт инициализации рекламных блоков -->
+  <script>
+    window.yaContextCb.push(() => {
+      Ya.Context.AdvManager.render({
+        renderTo: 'yandex_rtb_R-A-XXXXXX-1',
+        blockId: 'R-A-XXXXXX-1'
+      });
+      Ya.Context.AdvManager.render({
+        renderTo: 'yandex_rtb_R-A-XXXXXX-2',
+        blockId: 'R-A-XXXXXX-2'
+      });
+      Ya.Context.AdvManager.render({
+        renderTo: 'yandex_rtb_R-A-XXXXXX-3',
+        blockId: 'R-A-XXXXXX-3'
+      });
+      Ya.Context.AdvManager.render({
+        renderTo: 'yandex_rtb_R-A-XXXXXX-4',
+        blockId: 'R-A-XXXXXX-4'
+      });
+    });
+  </script>
+
 </body>
 
 </html>

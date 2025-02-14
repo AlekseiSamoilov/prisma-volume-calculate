@@ -4,14 +4,16 @@ import Input from './components/Input/Input';
 import Button from './components/Button/Button';
 import Result from './components/Result/Result';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
-import LanguageToggle from './components/LanguageToggle/LanguageToggle';
+// import LanguageToggle from './components/LanguageToggle/LanguageToggle';
 import { useTranslation } from './hooks/useTranslations';
 import { useCalculator } from './hooks/useCalculator';
 import Calculator from './components/Calculator/Calculator';
+import ContentPage from './components/ContentPage/ContentPage';
 
 const App: React.FC = () => {
   const { t } = useTranslation();
   const { openCalculator } = useCalculator();
+  const [isContentOpen, setIsContentOpen] = useState(false);
 
   const [height, setHeight] = useState<string>('');
   const [topArea, setTopArea] = useState<string>('');
@@ -50,6 +52,11 @@ const App: React.FC = () => {
         <h1 className='text-2xl font-semibold mb-6 text-gray-800 dark:text-white text-center'>
           {t('title')}
         </h1>
+
+        <div className='mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg'>
+          <div id='yandex_rtb_R-A-XXXXXX-4'></div>
+        </div>
+
         <Input
           label={t('height')}
           value={height}
@@ -75,23 +82,25 @@ const App: React.FC = () => {
           <Button onClick={clearAllInputs} className="flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">
             {t('clearAll')}
           </Button>
+          <Button onClick={() => setIsContentOpen(true)} className='flex-1 min-w-[30%] bg-green-500 hover:bg-green-600'>Подробнее о расчетах</Button>
         </div>
         <div className='flex items-center justify-center gap-1 flex-col'>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
         </div>
         <div className=" mt-5 flex justify-center">
-          <a
+          {/* <a
             className='text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors'
             href='https://github.com/AlekseiSamoilov'
             target="_blank"
             rel="noopener noreferrer"
           >
             Aleksei Samoilov 2024
-          </a>
+          </a> */}
         </div>
       </div>
       <Calculator />
+      {isContentOpen && <ContentPage onClose={() => setIsContentOpen(false)} />}
     </div>
   )
 }
