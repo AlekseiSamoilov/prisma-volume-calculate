@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign
+Host: https://www.geocalc.ru/
 Sitemap: https://www.geocalc.ru/sitemap.xml
