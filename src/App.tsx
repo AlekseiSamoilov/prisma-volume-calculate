@@ -8,6 +8,7 @@ import { useTranslation } from './hooks/useTranslations';
 import { useCalculator } from './hooks/useCalculator';
 import Calculator from './components/Calculator/Calculator';
 import ContentPage from './components/ContentPage/ContentPage';
+import LanguageToggle from './components/LanguageToggle/LanguageToggle';
 
 const App: React.FC = () => {
   const { t } = useTranslation();
@@ -52,9 +53,9 @@ const App: React.FC = () => {
           {t('title')}
         </h1>
 
-        <div className='mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg'>
+        {/* <div className='mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg'>
           <div id='yandex_rtb_R-A-XXXXXX-4'></div>
-        </div>
+        </div> */}
 
         <Input
           label={t('height')}
@@ -81,11 +82,11 @@ const App: React.FC = () => {
           <Button onClick={clearAllInputs} className="flex-1 min-w-[30%] bg-red-500 hover:bg-red-600 active:bg-red-700">
             {t('clearAll')}
           </Button>
-          <Button onClick={() => setIsContentOpen(true)} className='flex-1 min-w-[30%] bg-green-500 hover:bg-green-600'>Подробнее о расчетах</Button>
+          {/* <Button onClick={() => setIsContentOpen(true)} className='flex-1 min-w-[30%] bg-green-500 hover:bg-green-600'>Подробнее о расчетах</Button> */}
         </div>
         <div className='flex items-center justify-center gap-1 flex-col'>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
-          {/* <LanguageToggle /> */}
+          <LanguageToggle />
         </div>
         <div className=" mt-5 flex justify-center">
           {/* <a
