@@ -1,6 +1,7 @@
 {
-    "name": "Калькулятор объема усеченной призмы",
-    "short_name": "GeoCalc",
+    "name": "Калькулятор объема геометрических тел (Призма, Пирамида, Усеченная призма)",
+    "short_name": "Геометрический калькулятор",
+    "description": "Удобный онлайн калькулятор для расчета объемов усеченной призмы, пирамиды",
     "icons": [
         {
             "src": "/ai-logo.png",
@@ -11,5 +12,25 @@
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#000000"
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "keywords": [
+        "калькулятор",
+        "объем",
+        "геометрические тела",
+        "усеченная призма",
+        "пирамида",
+        "призма",
+        "расчет объема",
+        "геометрия",
+        "математика"
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "categories": [
+        "utilities",
+        "math",
+        "education",
+        "construction"
+    ]
 }
