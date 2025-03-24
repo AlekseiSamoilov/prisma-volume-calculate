@@ -9,6 +9,7 @@ import { useCalculator } from './hooks/useCalculator';
 import Calculator from './components/Calculator/Calculator';
 import ContentPage from './components/ContentPage/ContentPage';
 import LanguageToggle from './components/LanguageToggle/LanguageToggle';
+import PWAInstallGuide from './components/PWAInstallGuide/PWAInstallGuide';
 
 const App: React.FC = () => {
   const { t } = useTranslation();
@@ -87,6 +88,7 @@ const App: React.FC = () => {
         <div className='flex items-center justify-center gap-1 flex-col'>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
           <LanguageToggle />
+          <PWAInstallGuide />
         </div>
         <div className=" mt-5 flex justify-center">
           {/* <a
