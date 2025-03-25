@@ -87,7 +87,7 @@ const App: React.FC = () => {
         </div>
         <div className='flex items-center justify-center gap-1 flex-col'>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={() => setIsDarkMode(!isDarkMode)} />
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
           <PWAInstallGuide />
         </div>
         <div className=" mt-5 flex justify-center">

@@ -1,17 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from '../../hooks/useTranslations'
-// import Button from '../Button/Button';
 
 const PWAInstallGuide: React.FC = () => {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const [isIOS, setIsIOS] = useState(false);
+    const [isAndroid, setIsAndroid] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsIOS(/iPad|iPhone|iPod /.test(navigator.userAgent) ||
+                (navigator.userAgent.includes('Mac') && 'ontouchend' in document));
+            setIsAndroid(/Android/.test(navigator.userAgent));
+        }
+    }, []);
 
     const toggleGuide = () => {
         setIsOpen(!isOpen);
     };
-
-    const isIOS = /iPad|Iphone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
-    const isAndroid = /Android/.test(navigator.userAgent);
 
     return (
         <div className='w-full'>
@@ -26,7 +32,7 @@ const PWAInstallGuide: React.FC = () => {
 
             {isOpen && (
                 <div className='mt-3 p-4 bg-gray-100 dark:bg-gray-700 rounded-xl'>
-                    <h2 className='text-lg font-bold mb-2 text-gray-800 dark:text-gray-800 dark:text-white'>
+                    <h2 className='text-lg font-bold mb-2 text-gray-800 dark:text-white'>
                         {t('installAppTitle')}
                     </h2>
                     <p className='text-sm mb-3 text-gray-700 dark:text-gray-300'>
